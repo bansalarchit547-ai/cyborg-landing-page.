@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyborg Landing Page</title>
+    <style>
+        /* CSS: डिजाइन और स्टाइलिंग */
+        body {
+            background-color: #000;
+            color: #00ff41;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #00ff41;
+            padding: 40px;
+            background: rgba(0, 20, 0, 0.8);
+            box-shadow: 0 0 20px #00ff41;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* टाइपराइटर एनीमेशन */
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #00ff41;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #00ff41 } }
+
+        /* ग्लिच इफेक्ट */
+        h1:hover {
+            animation: glitch 0.3s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); text-shadow: 0 0 #00ff41; }
+            20% { transform: translate(-2px, 2px); text-shadow: 2px 0 red, -2px 0 blue; }
+            40% { transform: translate(-2px, -2px); text-shadow: -2px 0 red, 2px 0 blue; }
+            100% { transform: translate(0); text-shadow: 0 0 #00ff41; }
+        }
+
+        button {
+            background: transparent;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            padding: 12px 25px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00ff41;
+            color: black;
+            box-shadow: 0 0 20px #00ff41;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="typewriter">SYSTEM ACTIVATED...</h1>
+        <p>Cyborg Interface Ready to Explore.</p>
+        <button onclick="showAlert()">ACCESS DATA</button>
+    </div>
+
+    <script>
+       
+        function showAlert() {
+            alert("सिस्टम एक्सेस सफल! डेटा लोड हो रहा है...");
+        }
+    </script>
+
+</body>
+</html>
